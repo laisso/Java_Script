@@ -8,21 +8,50 @@
     <style>  
         body{
 
-            background-color: rgb(154, 154, 199); 
-            color: white;
-            font: normal 14pt serif;
-            
-        }
+            margin: 0 ;
+            padding: 0 ;
+            height : 100% ; }
 
-        h1 {
-            color: rgb(55, 16, 92)
-        }
+           .container {
+                position: relative;
+                height: 100vh;
+                background-image:url("https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); 
+                background-position: center ;
+                display: flex ;
+                align-items: center;
+                justify-content: center;
+                font: normal 14pt serif;
+            
+            }
+
+            .blur-background {
+                position: absolute;
+                width:100%;
+                height: 100%;
+                background: inherit;
+                filter: blur(4px); /* ajuste o valor de acordo com o efeito desejado*/
+             
+
+            }
+
+            .content{
+                z-index: 1;
+                text-align: center;
+                color: #fff;/*cor do texto*/
+            }
+
+        
     </style>
 
 </head>
-<body>    <!--body é o corpo do meu código, onde fica as informações-->
+<body>   
+    <div class = "container">
+    <div class = "blur-background"></div>
+    <div class="content">
+    
+    <!--body é o corpo do meu código, onde fica as informações-->
         <h1>Olá mundo!</h1> <!--título de nível 1-->
-        <p>Já me livrei da maldição!!</p> <!--corpo do texto--> 
+        <p>Este é meu primeiro código em JS</p> <!--corpo do texto--> 
 
         
         <!-- Dentro do script(que precisa ficar sempre no final do corpo para processar 
